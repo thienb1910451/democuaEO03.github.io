@@ -1,0 +1,937 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x:hidden;
+
+}
+html{
+    scroll-behavior: smooth;  /*Làm hiệu ứng trượt khi ấn vào header */
+    overflow-x:hidden;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    
+}
+
+.myslider{
+    
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    display: none;
+    
+}
+
+.prev,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    transition: 0.1s;
+    user-select: none;  /*luu y*/
+}
+.pre:hover ,
+.next:hover {
+    color: teal;
+
+}
+
+.next{
+    right:0;
+}
+
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%) ;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-direction: 1.5s;
+    animation-name: fade;
+    animation-direction: 1.5s;
+}
+
+
+@-webkit-keyframes fade{
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    } 
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.txt{
+    position: absolute;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top:40%;
+    left: 15%;
+    -webkit-animation-name: posi;
+    -webkit-animation-direction: 2s;
+    animation-name: posi;
+    animation-direction: 2s;
+    z-index: 1;
+}
+
+@-webkit-keyframes posi{
+    from{
+        left: 25%;
+    }
+    to{
+        left: 15%;
+    } 
+}
+
+@keyframes posi {
+    from{
+        left: 25%;
+    }
+    to{
+        left: 15%;
+    } 
+    
+}
+
+.txt h1{
+    color: rgb(23, 116, 255);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.txt p{
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.slider-img{
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    transform: scale(1.5, 1.5);
+   -webkit-animation-name: zoomin; 
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin{
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.5,1.5);
+    } 
+}
+
+@keyframes fade {
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.1,1.1);
+    } 
+    
+}
+
+@media screen and (max-width: 800px){
+    .myslider{
+        height: 500px;
+
+    }
+    .txt{
+        line-height: 25px;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-direction: 2s;
+        animation-name: posi2;
+        animation-direction: 2s;
+    }
+    @-webkit-keyframes posi2 {
+        from{top: 35%;}
+        to{top: 35%;}
+    }
+    @keyframes posi2 {
+        from{top: 35%;}
+        to{top: 35%;}
+    }
+    .txt h1{
+        font-size: 40px;
+    }
+    .txt p{
+        font-size: 13px;
+    }
+    
+}
+
+
+@media screen and (max-width: 520px) {
+    .txt h1{
+        font-size: 30px;
+    }
+    
+    
+}
+
+.active, .dot:hover{     /*ki ấn thì thêm class active nên nút tròn sẽ giữ nguyên màu*/
+    border-color: rgb(114, 114, 240);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.header{
+    /* width: 100%; */
+    height: 60PX;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    line-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 3px 3px 3px rgba(194, 193, 193, 0.3);
+}
+
+.header-right{
+    display: flex;
+}
+
+.text-item{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.header-left-text:hover a{
+    color: rgb(25, 182, 11);
+    transition: 0.1s;
+}
+
+
+.header-left-text:hover{
+    border-bottom: 3px solid rgb(25, 182, 11);
+    transition: 0.1s;
+}
+
+.header-left-text-mobile:hover a{
+    color: rgb(25, 182, 11);
+    transition: 0.1s;
+}
+
+
+.header-left-text{
+    margin: 0 10px;
+}
+
+.header-left-text-mobile{
+    margin: 0 10px;
+}
+
+.topic{
+    font-weight: 600;
+    font-size: 34px;
+}
+.text-item-topic{
+    
+}
+
+/* ////////////////////////////////////////////////////////////  Content  //////////////////////////////////////////////////////////////////////////////////////// */
+.Content-one{
+    background-color: white;
+    margin: 0 64px ;
+    padding: 64px 0;
+    
+}
+
+.Content-one-body{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+}
+
+.Content-left{
+    /* flex:1; */
+    width: 47%;
+    margin: 0 32px 0 0;
+}
+
+.Content-right{
+    /* flex:1; */
+    width: 47%;
+
+    margin: 0 0 0 32px;
+    text-align: center;
+    
+}
+
+.Content-right-text1{
+    font-size: 36px;
+    margin: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.Content-right-text2{
+    font-size: 22px;
+    margin: 30px 0;
+    color: rgb(134, 133, 133);   /* Màu chung xám */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.Content-left-img{
+    width: 100%;
+}
+
+.Content-topic{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 64px;
+    font-weight: 500;
+}
+
+.Content-ont-btn{
+    display: block;
+    margin: auto;
+    font-size: 28px;
+    border-radius: 50px;
+    padding: 14px 30px;
+    background-color: green;
+    border: none;
+}
+.Content-ont-btn:hover{
+    opacity: 0.7;
+    transition: 0.8s;
+}
+.Content-ont-btn-text{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    
+}
+
+.Content-two{
+    width: 100%;
+    height:400px;
+    /* Background lồng dưới */
+    background-image: url('/assets/img/img3-fixed.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Content-two-body{
+    text-align: center;
+    color: rgb(255, 255, 255);
+   
+}
+
+.Content-two-body-1{
+    font-size: 46px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:64px 0
+}
+.Content-two-body-2{
+font-size: 24px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.Content-two-body-3{
+    margin: 60px 0 0 0;
+}
+.Content-icon{
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+
+.Content-three{
+    background-color: rgb(255, 255, 255);
+    
+    margin: 0 64px ;
+    padding: 64px 0;
+}
+
+.Content-three-body-service{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    justify-content: space-evenly;
+}
+.service-item{
+    width: 22%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.item_icon{
+    font-size: 66px;
+    color: green;
+}
+.service-item_icons{
+    margin: 0 0 26px 0;
+}
+.service-item_topic{
+    margin: 0 0 26px 0;
+    font-size: 34px;
+}
+.service-item_content{
+    font-size: 18px;
+    color: rgb(134, 133, 133);;
+}
+
+.Content-three-work{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-img{
+    width: 33.333333%;
+    /* padding:3px 5px ; */
+    position: relative;
+    overflow: hidden;
+}
+
+.work-img-item{
+    width: 100%;
+    height: 100%;
+}
+
+.work-img-text{
+    position: absolute;
+    bottom: 10%;
+    left: 34%;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-weight: 500;
+    transition: linear 0.3s;
+    opacity: 0;
+}
+
+
+.work-img:hover .work-img-text{
+    bottom: 50%;
+    opacity: 1;
+}
+
+.work-img:hover img{
+    transform: scale(1.05);
+    transition: linear 0.3s; 
+    /* opacity: 0.8; */
+    filter: blur(5px);  /*Hiệu ứng làm mờ  BLUR ảnh */
+}
+
+
+.Content-four{
+    background-color: rgb(255, 255, 255);
+    margin: 0 64px ;
+    padding: 64px 0;
+}
+
+.Content-topic-text{
+    text-align: center;
+    font-size: 22px;
+    color: rgb(134, 133, 133);
+    margin-bottom: 32px;
+}
+
+.Content-four-elements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Content-four-element{
+    width: 32%;
+    text-align: center;
+    height: 220px;
+    background-color: #575555;
+    margin: 7px;
+    border-radius: 8px;
+    
+}
+.element-icon{
+    font-size: 70px;
+    color: #FD7E14;
+    margin: 46px 0;
+}
+
+.element-name{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+.Content-four-element:hover {
+background-color: #FD7E14;
+transition: 1s;
+}
+
+.Content-four-element:hover .element-name{
+    color: #000;
+}
+.Content-four-element:hover .element-icon{
+    color: #000;
+}
+
+.Content-five{
+    background-color: white;
+    margin: 0 64px ;
+    padding: 64px 0;
+}
+
+.Content-five-teams{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Content-five-team{
+    width: 31.33333%;
+    padding: 0 10px;
+    margin: 32px 0 64px 0  ;
+}
+
+.team-infor{
+    text-align: center;
+    
+}
+
+.team-infor-name{
+    font-size: 32px;
+    margin: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.team-infor-major{
+    font-size: 20px;
+    margin: 20px 0 40px 0;
+    text-transform: uppercase;
+   
+}
+.team-infor-name-a{
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: green;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.team-infor-information{
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(134, 133, 133);
+}
+
+.team-img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.team-infor-major:hover {
+    opacity: 0.8;
+}
+
+.Content-six{
+    background-color: white;
+    margin: 0 64px ;
+    padding: 64px 0;
+}
+
+.Content-six-body{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.Content-six-body-left{
+    width: 45%;
+}
+.Content-six-body-right{
+    width: 45%;
+}
+.Content-six-body-left-input{
+    padding: 22px;
+    width: 88%;
+    margin: 20px;
+    font-size: 20px;
+    color: rgb(134, 133, 133);
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid rgba(134, 133, 133,0.8);
+    box-shadow: 3px 3px 3px rgba(134, 133, 133,0.8);
+}
+
+.Content-six-body-right-input{
+    height: 88%;
+    width: 100%;
+    margin: 20px;   
+    padding: 22px;  
+    font-size: 20px;
+    color: rgb(134, 133, 133);  
+    outline: none;
+    border-radius: 6px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid rgba(134, 133, 133,0.8);
+    box-shadow: 3px 3px 3px rgba(134, 133, 133,0.8);
+}
+
+
+.Content-six-btn{
+    font-size: 28px;
+    padding: 12px;
+    background-color:green ;
+    border-radius: 6px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid rgba(134, 133, 133,0.8);
+    box-shadow: 3px 3px 3px rgba(134, 133, 133,0.8);
+    color: white;
+    cursor: pointer;
+}
+
+.Content-six-button{
+  margin-top: 72px;
+    margin-left: 50%;
+    width: 100%;
+}   
+
+.Content-six-btn:hover{
+    opacity: 0.8;
+}
+
+.Content-six-icon{
+    display: flex;
+    text-align: center;
+    margin: 64px 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Content-six-icon-items{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(83, 83, 83, 0.8);
+    border-radius: 50px;
+    margin: 0 auto 32px auto;
+    
+}
+
+.Content-six-icon-item{
+    margin-top: 30%;
+    font-size: 40px;
+    color: #FD7E14;
+}
+
+.Content-six-icon-text-1{
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+.Content-six-icon-text-2{
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(134, 133, 133);
+}
+
+.Content-six-icons-item{
+    margin: 0 10px;
+    width: 23%;
+}
+
+.Footer{
+    height: 100px;
+    background-color: rgba(134, 133, 133,0.9);
+}
+.Footer-texts{
+    text-align: center;
+    
+}
+
+.Footer-text{
+    line-height: 100px;
+    font-size: 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* -------------------------------------------------------REPONSIZE ----------------------------------------------*/
+
+@media only screen and (max-width: 739px){
+.header-right{
+    display: none;
+}
+
+.dot{
+    width: 5px;
+    height: 5px;
+}
+.Content-topic{
+    font-size: 40px;
+}
+.Content-left{
+    margin: 0;
+    width: 100%;
+}
+.Content-right{
+    width: 100%;
+}
+.Content-right-text1{
+    font-size: 24px;
+
+}
+
+.Content-right-text2{
+    font-size: 16px;
+}
+.Content-ont-btn{
+    padding: 7px 12px;
+    font-size: 20px;
+}
+
+.Content-two-body-1{
+    font-size: 36px;
+}
+.Content-two-body-2{
+    font-size: 16px;
+}
+
+.service-item{
+    width: 37%;
+}
+.service-item_topic{
+    font-size: 20px;
+}
+
+
+.service-item_content{
+    font-size: 16px;
+}
+
+.work-img-text{
+    font-size: 10px;
+}
+.work-img{
+    width: 50%;
+}
+
+.Content-four-element{
+    width: 100%;
+}
+
+.Content-topic-text{
+    font-size: 18px;
+}
+
+.Content-five-team{
+    width: 100%;
+}
+.team-infor-name{
+    font-size: 26px;
+}
+
+.team-infor-name-a, .team-infor-information{
+    font-size: 16px;
+}
+
+
+.Content-six-body-left{
+    width: 100%;
+}
+
+.Content-six-body-left-input{
+    width: 70%;
+}
+
+.Content-six-body-right{
+    width: 100%;
+}
+.Content-six-body-right-input{
+    height: 75%;
+    width: 71%;
+}
+.Content-six-btn{
+    font-size: 14px;
+}
+.Content-six-icons-item{
+    width: 40%;
+}
+.Content-six-icon-text-1{
+    font-size: 20px;
+}
+.Content-six-icon-text-2{
+    font-size: 12px;
+}
+}
+
+
+/* Tablet  width >=740px and width <1024px*/
+
+@media only screen and (min-width: 740px) and (max-width: 1200px){
+.Content-left{
+    width: 100%;
+    margin: 0;
+}
+.Content-right{
+    width: 100%;
+}
+.Content-five-team{
+width: 47;
+}
+
+.work-img-text{
+    font-size: 12px;
+}
+
+.Content-six-body-left{
+    width: 100%;
+}
+
+.Content-six-body-left-input{
+    width: 90%;
+}
+
+.Content-six-body-right{
+    width: 100%;
+}
+.Content-six-body-right-input{
+    height: 75%;
+    width: 90%;
+}
+
+
+.team-infor-major{
+    font-size: 14px;
+}
+
+.service-item{
+    width: 20%;
+}
+
+
+}
+
+
+.overlay{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    display: none;
+    animation: fadeIn linear 0.2s;  /***********/
+}
+
+
+
+.Header_left-mobile{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 220px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.2s,opacity linear 0s;  /* hieu ung truot cua thanh cong cu*/
+    z-index: 5;
+    max-width: 100%;
+
+}
+
+/* DAY CHINH LLA BAM VAO DE HIEN HOAC AN CAI THE INPUT */
+.input-check:checked ~ .overlay{  
+    display: block;
+}    
+/* DAY CHINH LLA BAM VAO DE HIEN HOAC AN CAI THE INPUT */
+.input-check:checked ~ .Header_left-mobile{  
+    transform:translateX(0%);
+    opacity: 1;  /* hieu ung m dan cho thanh ben phai*/
+}   
+
+.icon-close{
+    display: block;
+    text-align: right;
+    font-size: 28px;
+    margin-right: 16px;
+}
+
+.Header-icon-item{
+    font-size: 30px;
+   
+   
+}
+
+@media  (max-width: 740px){
+    
+    .Header-icon{
+        display: block;
+    }
+    .Header-right{
+        display: none;
+    }
+}
+
+
+@media  (min-width: 740px){
+    .Header-icon{
+        display: none;
+    }
+    .Header-right{
+        display: block;
+    }
+}
+
+.input-check{
+    display: none;
+}
+
+.icon-header{
+    color: black;
+}
+
+.andi{
+    transform: translateX(100%);
+}

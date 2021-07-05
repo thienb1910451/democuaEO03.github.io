@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/fontawesome-free-5.15.3-web/css/all.min.css">
+
+	<title>Web3</title>
+</head>
+
+<body>
+	<!-- Phần Header / -->
+	<div class="header">
+		<div class="header-left">
+			<div class="header-left-text-topic">
+				<a href="#" class="text-item topic" style="color: black; ">TWÓEO</a>
+			</div>
+
+		</div>
+
+
+		
+		<div class="header-right">
+			<div class="header-left-text">
+				<a href="#" class="text-item">Home</a>
+			</div>
+			<div class="header-left-text">
+				<a href="#About" class="text-item">About</a>
+			</div>
+			<div class="header-left-text">
+				<a href="#Work" class="text-item">Work</a>
+			</div>
+			<div class="header-left-text">
+				<a href="#Services" class="text-item">Services</a>
+			</div>
+			<div class="header-left-text">
+				<a href="#Team" class="text-item">Team</a>
+			</div>
+			<div class="header-left-text">
+				<a href="#Contact" class="text-item">Contact</a>
+			</div>
+		</div>
+		
+		
+		
+		<input type="checkbox" class="input-check" id="Input-mobile">
+		<!--BUOC 2  The label co for =" dien id cua cai checkbox vao" -->
+		<label for="Input-mobile" class="Header-icon">
+			<!-- THANH PHAN O GIUA THE LABEL CHINH LA CAI DE BAM VAO, VD : ICON -->
+			<i class="Header-icon-item fas fa-bars"></i>
+		</label>
+
+		 <!-- bo overlay vao moi hien len -->
+		 <label for="Input-mobile"  class="overlay" ID="overlay-check"></label>
+
+
+
+		 <div class="Header_left-mobile" >
+			<label for="Input-mobile" class="icon-close">
+			<i class="topic-mobile-icon fas fa-times"></i><br> </label>
+			
+			<div class="header-left-text-mobile" >
+				<a href="#" class="text-item">Home</a>
+			</div>
+			<div class="header-left-text-mobile">
+				<a href="#About" class="text-item">About</a>
+			</div>
+			<div class="header-left-text-mobile">
+				<a href="#Work" class="text-item">Work</a>
+			</div>
+			<div class="header-left-text-mobile">
+				<a href="#Services" class="text-item">Services</a>
+			</div>
+			<div class="header-left-text-mobile">
+				<a href="#Team" class="text-item">Team</a>
+			</div>
+			<div class="header-left-text-mobile">
+				<a href="#Contact" class="text-item">Contact</a>
+			</div>
+		  </div>
+
+	</div>
+
+	<!-- Phần Show Slide -->
+	<div class="slider">
+		<!-- fade css -->
+		<div class="myslide fade" style="overflow: hidden;">
+			<div class="txt">
+				<h1>IMAGE 1</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img class="slider-img" src="./assets/img/img1.jpeg" style="width: 100%; height: 650px;">
+		</div>
+
+		<div class="myslide fade" style="overflow: hidden;">
+			<div class="txt">
+				<h1>IMAGE 2</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img class="slider-img" src="./assets/img/img2.jpeg" style="width: 100%; height: 650px;">
+		</div>
+
+		<div class="myslide fade" style="overflow: hidden;">
+			<div class="txt">
+				<h1>IMAGE 3</h1>	
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img class="slider-img" src="./assets/img/img3.jpeg" style="width: 100%; height: 650px; ">
+		</div>
+
+		<div class="myslide fade" style="overflow: hidden;">
+			<div class="txt">
+				<h1>IMAGE 4</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img class="slider-img" src="./assets/img/img4.jpeg" style="width: 100%; height: 650px;">
+		</div>
+
+		<div class="myslide fade" style="overflow: hidden;">
+			<div class="txt">
+				<h1>IMAGE 5</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img class="slider-img" src="./assets/img/img5.jpeg" style="width: 100%; height: 650px;">
+		</div>
+
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		</div>
+
+	</div>
+
+	<!-- Phần Content-1 -->
+	<div id="About" class="Content-one">
+		<div class="Content-topic">ABOUT US</div>
+		<div class="Content-one-body">
+
+
+			<div class="Content-left">
+				<img src="./assets/img/body1.jpg" alt="" class="Content-left-img">
+			</div>
+			<div class="Content-right">
+				<p class="Content-right-text1">
+					We've got what you need!
+				</p>
+				<p class="Content-right-text2">
+					Start Bootstrap has everything you need to get your new website up and running in no time! All of
+					the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No
+					strings attached!
+				</p>
+
+				<p class="Content-right-text2">
+					Your About Me Page is typically one of the most visited pages on your site. So keep reading to find
+					out how easy it is for you to write one that is stunningly helpful and user-friendly.
+				</p>
+
+				<p class="Content-right-text2">
+					It builds trust and helps someone make the decision to further their relationship with you — whether
+					that’s in the form of signing up for your email list, requesting a consultation, or buying one of
+					your products.
+				</p>
+			</div>
+
+		</div>
+		<button class="Content-ont-btn"><a href="" class="Content-ont-btn-text">MORE ABOT ME</a></button>
+	</div>
+
+	<!-- Phần Content-2 About me -->
+	<div id="Content" class="Content-two">
+		<div class="Content-two-body">
+			<p class="Content-two-body-1">TWOEO</p>
+			<p class="Content-two-body-2">Start Bootstrap has everything you need to get your new website up and running
+				in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and
+				easy to use. No strings attached!</p>
+			<div class="Content-two-body-3">
+				<i class="Content-icon fab fa-twitter-square"></i>
+				<i class="Content-icon fab fa-google-plus-square"></i>
+				<i class="Content-icon fab fa-facebook-square"></i>
+				<i class="Content-icon fab fa-instagram-square"></i>
+				<i class="Content-icon fab fa-youtube"></i>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Phần Content-3 WORK -->
+	<div id="Work" class="Content-three">
+		<div class="Content-topic">WORK</div>
+
+		<div class="Content-three-body">
+			<div class="Content-three-body-service">
+				<div class="service-item">
+					<div class="service-item_icons"><i class="item_icon far fa-gem"></i></div>
+					<div class="service-item_topic">Sturdy Templates</div>
+					<div class="service-item_content">Our templates are updated regularly so they don't break.</div>
+				</div>
+
+				<div class="service-item">
+					<div class="service-item_icons"><i class="item_icon fas fa-plane"></i></div>
+					<div class="service-item_topic">Ready to Ship</div>
+					<div class="service-item_content">You can use this theme as is, or you can make changes!</div>
+				</div>
+
+				<div class="service-item">
+					<div class="service-item_icons"><i class="item_icon far fa-newspaper"></i></div>
+					<div class="service-item_topic">Up to Date</div>
+					<div class="service-item_content">We update dependencies to keep things fresh.</div>
+				</div>
+
+				<div class="service-item">
+					<div class="service-item_icons"><i class="item_icon fas fa-heart"></i></div>
+					<div class="service-item_topic">Made with Love</div>
+					<div class="service-item_content">You have to make your websites with love these days!</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="Content-three-work">
+			<div class="work-img">
+				<img class="work-img-item" src="./assets/img/work1.jpg" alt="">
+				<div class="work-img-text">CATERORY</div>
+			</div>
+
+			<div class="work-img">
+				<img class="work-img-item" src="./assets/img/work2.jpg" alt="">
+				<div class="work-img-text">BOOKS</div>
+			</div>
+
+			<div class="work-img">
+				<img class="work-img-item" src="./assets/img/work3.jpg" alt="">
+				<div class="work-img-text">CAMERA</div>
+			</div>
+
+			<div class="work-img">
+				<img class="work-img-item" src="./assets/img/work4.jpg" alt="">
+				<div class="work-img-text">FAST FOOD</div>
+			</div>
+
+			<div class="work-img">
+				<img class="work-img-item" src="./assets/img/work5.jpg" alt="">
+				<div class="work-img-text">ITEM</div>
+			</div>
+
+			<div class="work-img">
+				<img class="work-img-item" src="./assets/img/work6.jpg" alt="">
+				<div class="work-img-text">EQUIPMENT</div>
+			</div>
+
+		</div>
+
+		<div class="Content-three-services"></div>
+	</div>
+
+	<!-- Phần Content-4	 Services-->
+	<div id="Services" class="Content-four">
+		<div class="Content-topic">SERVICES</div>
+		<div class="Content-topic-text">Far far away, behind the word mountains, far from the countries Vokalia and
+			Consonantia</div>
+		<div class="Content-four-elements">
+			<div class="Content-four-element">
+				<div class="element-icons"><i class="element-icon fas fa-search-dollar"></i></div>
+				<div class="element-name">WEB DESIGN</div>
+			</div>
+
+			<div class="Content-four-element">
+				<div class="element-icons"><i class="element-icon fas fa-camera-retro"></i></i></div>
+				<div class="element-name">PHOTOGRAPHY</div>
+			</div>
+
+			<div class="Content-four-element">
+				<div class="element-icons"><i class="element-icon fab fa-dropbox"></i></i></div>
+				<div class="element-name">WEB DEVELOPER</div>
+			</div>
+
+			<div class="Content-four-element">
+				<div class="element-icons"><i class="element-icon fas fa-laptop-code"></i></i></div>
+				<div class="element-name">APP DEVELOPING</div>
+			</div>
+
+			<div class="Content-four-element">
+				<div class="element-icons"><i class="element-icon fas fa-book-open"></i></i></div>
+				<div class="element-name">BRANDING</div>
+			</div>
+
+			<div class="Content-four-element">
+				<div class="element-icons"><i class="element-icon fas fa-virus"></i></i></div>
+				<div class="element-name">PRODUCT</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Phần Content-5	 Team-->
+	<div id="Team" class="Content-five">
+		<div class="Content-topic">TEAM</div>
+		<div class="Content-topic-text">We have a history of doing what our name implies, creating a visual language
+			around the beliefs of the brands we work with.</div>
+
+
+		<div class="Content-five-teams">
+			<div class="Content-five-team">
+				<div class="team-imgs"><img src="./assets/img/member-1.png" alt="" class="team-img"></div>
+				<div class="team-infor">
+					<div class="team-infor-name">Andrew Drazen</div>
+					<div class="team-infor-major"><a class="team-infor-name-a" href="">senior attorney</a></div>
+					<div class="team-infor-information">It's said you can tell a lot about someone by the company they
+						keep. We're enormously proud of the clients who have trusted us to represent them over the
+						years.</div>
+					<div class="team-infor-icon"></div>
+				</div>
+			</div>
+
+			<div class="Content-five-team">
+				<div class="team-imgs"><img src="./assets/img/member-2.png" alt="" class="team-img"></div>
+				<div class="team-infor">
+					<div class="team-infor-name">Monica Buffey</div>
+					<div class="team-infor-major"><a class="team-infor-name-a" href="">assistant attorney</a></div>
+					<div class="team-infor-information">While we are a general practice, we limit our focus to areas
+						where we have gained particular and pertinent experience over the years in past. Have you tried.
+					</div>
+					<div class="team-infor-icon"></div>
+				</div>
+			</div>
+
+			<div class="Content-five-team">
+				<div class="team-imgs"><img src="./assets/img/member-3.png" alt="" class="team-img"></div>
+				<div class="team-infor">
+					<div class="team-infor-name">Dave Ivan</div>
+					<div class="team-infor-major"><a class="team-infor-name-a" href="">junior consultant</a></div>
+					<div class="team-infor-information">The standards and passion we set for ourselves in being the
+						David against Goliath in these intense endeavors follows through to all our client matters.
+					</div>
+					<div class="team-infor-icon"></div>
+				</div>
+			</div>
+
+			<div class="Content-five-team">
+				<div class="team-imgs"><img src="./assets/img/member-4.png" alt="" class="team-img"></div>
+				<div class="team-infor">
+					<div class="team-infor-name">rebecca triby</div>
+					<div class="team-infor-major"><a class="team-infor-name-a" href="">junior consultant</a></div>
+					<div class="team-infor-information">Our lawyers have accomplished with the advanced legal knowledge
+						and legal insight necessary to prosecute the most challenging cases and regulatory.</div>
+					<div class="team-infor-icon"></div>
+				</div>
+			</div>
+
+
+			<div class="Content-five-team">
+				<div class="team-imgs"><img src="./assets/img/member-5.png" alt="" class="team-img"></div>
+				<div class="team-infor">
+					<div class="team-infor-name">Michael Ross</div>
+					<div class="team-infor-major"><a class="team-infor-name-a" href="">managing director</a></div>
+					<div class="team-infor-information">While we are a general practice, we limit our focus to areas
+						where we have gained particular and pertinent experience over the years in past.So Be careful
+					</div>
+					<div class="team-infor-icon"></div>
+				</div>
+			</div>
+
+			<div class="Content-five-team">
+				<div class="team-imgs"><img src="./assets/img/member-6.png" alt="" class="team-img"></div>
+				<div class="team-infor">
+					<div class="team-infor-name">camila cabello</div>
+					<div class="team-infor-major"><a class="team-infor-name-a" href="">senior consultant</a></div>
+					<div class="team-infor-information">While we are a general practice, we limit our focus to areas
+						where we have gained particular and pertinent experience over the years in past. good luck for
+						you</div>
+					<div class="team-infor-icon"></div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+	<!-- Phần Content-6	 Contact-->
+	<div id="Contact" class="Content-six">
+		<div class="Content-topic">CONTACT US</div>
+		<div class="Content-topic-text">Far far away, behind the word mountains, far from the countries Vokalia and
+			Consonantia</div>
+
+		<div class="Content-six-body">
+			<div class="Content-six-body-left">
+				<input class="Content-six-body-left-input" type="text" placeholder="Your Name *"><br>
+				<input class="Content-six-body-left-input" type="text" placeholder="Your Email *"><br>
+				<input class="Content-six-body-left-input" type="text" placeholder="Your Phone *"><br>
+
+			</div>
+			<div class="Content-six-body-right">
+				<input class="Content-six-body-right-input" type="text" placeholder="Your Message *"><br>
+
+			</div>
+
+			<div class="Content-six-button">
+				<button class="Content-six-btn">SEND MASSAGE</button>
+			</div>
+		</div>
+
+
+		<div class="Content-six-icon">
+			<div class="Content-six-icons-item">
+				<div class="Content-six-icon-items">
+					<i class="Content-six-icon-item fas fa-map-marked-alt"></i>
+				</div>
+				<div class="Content-six-icon-text-1">ADDRESS</div>
+				<div class="Content-six-icon-text-2">DaBac Street, Suite 721 CaMau 10016</div>
+			</div>
+
+			<div class="Content-six-icons-item">
+				<div class="Content-six-icon-items">
+					<i class="Content-six-icon-item fas fa-phone-alt"></i>
+				</div>
+				<div class="Content-six-icon-text-1">CONTACT NUMBER</div>
+				<div class="Content-six-icon-text-2">+ 1235 2355 98</div>
+			</div>
+
+			<div class="Content-six-icons-item">
+				<div class="Content-six-icon-items">
+					<i class="Content-six-icon-item fas fa-paper-plane"></i>
+				</div>
+				<div class="Content-six-icon-text-1">EMAIL ADDRESS</div>
+				<div class="Content-six-icon-text-2">phuocchuong64@gmail.com</div>
+			</div>
+
+
+			<div class="Content-six-icons-item">
+				<div class="Content-six-icon-items">
+					<i class="Content-six-icon-item fas fa-globe-americas"></i>
+				</div>
+				<div class="Content-six-icon-text-1">WEBSITE</div>
+				<div class="Content-six-icon-text-2">yoursite.com</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Phần Footer -->
+	<div class="Footer">
+		<div class="Footer-texts">
+			<p class="Footer-text">BY EO & THIEN</p>
+		</div>
+	</div>
+	<!--Nhúng Javacript  -->
+	<script src="./assets/js/js.js"></script>
+</body>
+
+</html>
